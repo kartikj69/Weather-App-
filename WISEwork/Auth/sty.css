@@ -1,0 +1,25 @@
+body {
+	background-image: url('/bg.jpg');
+	background-size: cover;
+	/* background-position: center; */
+	/* background-repeat: no-repeat; */
+	/* font-family: Arial, sans-serif; */
+}
+#cityName{
+    color: #faf5e9d1;
+}
+#we{
+    color: #faf5e9e1;
+}
+h1 {
+	text-align: center;
+	margin-top: 0;
+	color: #faf5e9d1;
+	/* text-shadow: 2px 2px #56537cdd; */
+}
+#head{
+    color: #faf5e9e1;
+}
+.texti{
+    color: #faf5e9e1;
+}

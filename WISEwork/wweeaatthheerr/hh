@@ -1,0 +1,20 @@
+fetch(
+  "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Delhi",
+  options
+)
+  .then((response) => response.json())
+  .then((response) => {
+    feels_likeDEL.innerHTML = response.feels_like;
+    humidityDEL.innerHTML = response.humidity;
+    max_tempDEL.innerHTML = response.max_temp;
+    min_tempDEL.innerHTML = response.min_temp;
+    sunriseDEL.innerHTML = response.sunrise;
+    sunsetDEL.innerHTML = response.sunset;
+    tempDEL.innerHTML = response.temp;
+    console.log(response);
+  })
+  .catch((err) => console.error(err));
+
+
+
+  bg-body-tertiary
