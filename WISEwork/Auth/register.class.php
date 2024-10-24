@@ -10,7 +10,7 @@ class RegisterUser{
 	private $stored_users;
 	private $new_user; // array 
 
-
+	// Constructor to initialize the class properties
 	public function __construct($username, $password){
 
 		$this->username = trim($this->username);
@@ -31,7 +31,7 @@ class RegisterUser{
 		}
 	}
 
-
+	// Method to check if the required fields are filled
 	private function checkFieldValues(){
 		if(empty($this->username) || empty($this->raw_password)){
 			$this->error = "Both fields are required.";
@@ -41,7 +41,7 @@ class RegisterUser{
 		}
 	}
 
-
+	// Method to check if the username already exists
 	private function usernameExists(){
 		foreach($this->stored_users as $user){
 			if($this->username == $user['username']){
@@ -52,7 +52,7 @@ class RegisterUser{
 		return false;
 	}
 
-
+	// Method to insert the new user into the storage
 	private function insertUser(){
 		if($this->usernameExists() == FALSE){
 			array_push($this->stored_users, $this->new_user);
@@ -64,6 +64,14 @@ class RegisterUser{
 		}
 	}
 
+	// Method to handle errors
+	private function handleError($errorMessage){
+		$this->error = $errorMessage;
+	}
 
+	// Method to handle success
+	private function handleSuccess($successMessage){
+		$this->success = $successMessage;
+	}
 
 } // end of class

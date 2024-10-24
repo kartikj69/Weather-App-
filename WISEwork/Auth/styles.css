@@ -126,4 +126,68 @@ form button:active{
 	margin-top: 50px;
 }
 
+/* Improved styles for better user experience */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
 
+form, .content {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    color: #333333;
+}
+
+form h4 {
+    color: #666666;
+}
+
+form label {
+    color: #333333;
+}
+
+form input, form textarea, form select {
+    border: 1px solid #cccccc;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+    border: 1px solid #56537cdd;
+}
+
+form button {
+    background-color: #56537cdd;
+}
+
+form button:hover {
+    background-color: #333333;
+}
+
+.error {
+    color: #ff0000;
+}
+
+.success {
+    color: #00cc00;
+}
+
+.content header a {
+    background-color: #f0f0f0;
+    border: 1px solid #cccccc;
+    color: #333333;
+}
+
+.content header a:hover {
+    background-color: #e0e0e0;
+}
+
+.content header {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.content main {
+    margin-top: 40px;
+}

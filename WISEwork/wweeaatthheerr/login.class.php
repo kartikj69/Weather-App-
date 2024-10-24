@@ -1,14 +1,15 @@
 <?php
 class LoginUser
 {
-    // class properties --------------------------------------
+    // class properties
     private $username;
     private $password;
     public $error;
     public $success;
     private $storage = "data.json";
     private $stored_users;
-    // class methods -----------------------------------------
+
+    // class methods
     public function __construct($username, $password)
     {
         $this->username = $username;
@@ -17,16 +18,29 @@ class LoginUser
         $this->login();
     }
 
+    // Method to handle user login
     private function login()
     {
         foreach ($this->stored_users as $user) {
             if ($user['username'] == $this->username) {
                 if (password_verify($this->password, $user['password'])) {
                     // You can set a session and redirect the user to his account.
-                    return $this->success = "You are loged in";
+                    return $this->success = "You are logged in";
                 }
             }
         }
         return $this->error = "Wrong username or password";
     }
-} // end of class
+
+    // Method to handle errors
+    private function handleError($errorMessage)
+    {
+        $this->error = $errorMessage;
+    }
+
+    // Method to handle success
+    private function handleSuccess($successMessage)
+    {
+        $this->success = $successMessage;
+    }
+}

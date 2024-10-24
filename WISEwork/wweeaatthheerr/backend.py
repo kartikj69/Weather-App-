@@ -11,30 +11,33 @@ db = mysql.connector.connect(
 )
 
 # Handle user registration
-
-
 def register_user(username, password):
     cursor = db.cursor()
     query = "INSERT INTO users (username, password) VALUES (%s, %s)"
     values = (username, password)
-    cursor.execute(query, values)
-    db.commit()
-    return True
+    try:
+        cursor.execute(query, values)
+        db.commit()
+        return True
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
+        return False
 
 # Handle user login
-
-
 def login_user(username, password):
     cursor = db.cursor()
     query = "SELECT * FROM users WHERE username=%s AND password=%s"
     values = (username, password)
-    cursor.execute(query, values)
-    result = cursor.fetchone()
-    if result:
-        return True
-    else:
+    try:
+        cursor.execute(query, values)
+        result = cursor.fetchone()
+        if result:
+            return True
+        else:
+            return False
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
         return False
-
 
 # Load the HTML template
 with open("login.html", "r") as f:

@@ -20,9 +20,6 @@
             <li class="nav-item text-light">
               <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#">About this App</a>
-            </li> -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 How to use?
@@ -33,9 +30,6 @@
                 <li><a class="dropdown-item" href="/Auth/index.php">Register</a></li>
               </ul>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li> -->
           </ul>
           <form class="d-flex" role="search">
             <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -57,12 +51,10 @@
               <div class="card-body">
                 <h1 class="card-title pricing-card-title">❄️<span id="tempx"></span><small class="text-muted fw-light">°C</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                  
-                  <li>Minimum Temprature is <span id="min_temp"></span></li>
-                  <li>Maximum Temprature is <span id="max_temp"></span></li>
-                  <li>But it Feels like<span id="feels_like"></span></li>
+                  <li>Minimum Temperature is <span id="min_temp"></span></li>
+                  <li>Maximum Temperature is <span id="max_temp"></span></li>
+                  <li>But it Feels like <span id="feels_like"></span></li>
                 </ul>
-                
               </div>
             </div>
           </div>
@@ -77,9 +69,7 @@
                   <li>Humidity is <span id="humidity"></span></li>
                   <li>Sunrise time is <span id="sunrise"></span></li>
                   <li>Sun sets on <span id="sunset"></span></li>
-                  
                 </ul>
-
               </div>
             </div>
           </div>
@@ -94,7 +84,6 @@
                   <li>Cloud PCT is <span id="cloud_pct"></span></li>
                   <li>Wind is on <span id="wind_degrees"></span> degrees</li>
                   <li>Wind is on <span id="wind_speed"></span> mph</li>
-                  
                 </ul>
               </div>
             </div>
@@ -115,13 +104,11 @@
                 <th class="texti" style="width: 22%;"> Min_temp </th>
                 <th class="texti" style="width: 22%;"> Sunrise </th>
                 <th class="texti" style="width: 22%;"> Sunset </th>
-                
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row" class="text-start texti">NYC</th>
-
                 <td class="texti"><span id="tempNYC"></span></td>
                 <td class="texti"><span id="feels_likeNYC"></span></td>
                 <td class="texti"><span id="humidityNYC"></span></td>
@@ -129,42 +116,39 @@
                 <td class="texti"><span id="min_tempNYC"></span></td>
                 <td class="texti"><span id="sunriseNYC"></span></td>
                 <td class="texti"><span id="sunsetNYC"></span></td>
-                
               </tr>
               <tr>
                 <th scope="row" class="text-start texti">Boston</th>
-                  <td class="texti"><span id="tempB"></span></td>
-                  <td class="texti"><span id="feels_likeB"></span></td>
-                  <td class="texti"><span id="humidityB"></span></td>
-                  <td class="texti"><span id="max_tempB"></span></td>
-                  <td class="texti"><span id="min_tempB"></span></td>
-                  <td class="texti"><span id="sunriseB"></span></td>
-                  <td class="texti"><span id="sunsetB"></span></td>
+                <td class="texti"><span id="tempB"></span></td>
+                <td class="texti"><span id="feels_likeB"></span></td>
+                <td class="texti"><span id="humidityB"></span></td>
+                <td class="texti"><span id="max_tempB"></span></td>
+                <td class="texti"><span id="min_tempB"></span></td>
+                <td class="texti"><span id="sunriseB"></span></td>
+                <td class="texti"><span id="sunsetB"></span></td>
               </tr>
             </tbody>
-    
             <tbody>
               <tr>
-                <th scope="row" class="text-start texti">Luknow</th>
-                  <td class="texti"><span id="tempLK"></span></td>
-                  <td class="texti"><span id="feels_likeLK"></span></td>
-                  <td class="texti"><span id="humidityLK"></span></td>
-                  <td class="texti"><span id="max_tempLK"></span></td>
-                  <td class="texti"><span id="min_tempLK"></span></td>
-                  <td class="texti"><span id="sunriseLK"></span></td>
-                  <td class="texti"><span id="sunsetLK"></span></td>
+                <th scope="row" class="text-start texti">Lucknow</th>
+                <td class="texti"><span id="tempLK"></span></td>
+                <td class="texti"><span id="feels_likeLK"></span></td>
+                <td class="texti"><span id="humidityLK"></span></td>
+                <td class="texti"><span id="max_tempLK"></span></td>
+                <td class="texti"><span id="min_tempLK"></span></td>
+                <td class="texti"><span id="sunriseLK"></span></td>
+                <td class="texti"><span id="sunsetLK"></span></td>
               </tr>
               <tr>
                 <th scope="row" class="text-start texti">Delhi</th>
                 <td class="texti"><span id="tempDEL"></span></td>
-                  <td class="texti"><span id="feels_likeDEL"></span></td>
-                  <td class="texti"><span id="humidityDEL"></span></td>
-                  <td class="texti"><span id="max_tempDEL"></span></td>
-                  <td class="texti"><span id="min_tempDEL"></span></td>
-                  <td class="texti"><span id="sunriseDEL"></span></td>
-                  <td class="texti"><span id="sunsetDEL"></span></td>
+                <td class="texti"><span id="feels_likeDEL"></span></td>
+                <td class="texti"><span id="humidityDEL"></span></td>
+                <td class="texti"><span id="max_tempDEL"></span></td>
+                <td class="texti"><span id="min_tempDEL"></span></td>
+                <td class="texti"><span id="sunriseDEL"></span></td>
+                <td class="texti"><span id="sunsetDEL"></span></td>
               </tr>
-              
             </tbody>
           </table>
         </div>
@@ -172,7 +156,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
     <script src="harry.js"></script>
   </body>
 </html>

@@ -1,39 +1,39 @@
-<?php require("register.class.php") ?>
 <?php
+require("register.class.php");
+
+// Handle form submission
 if (isset($_POST['submit'])) {
-   $user = new RegisterUser($_POST['username'], $_POST['password']);
+    $user = new RegisterUser($_POST['username'], $_POST['password']);
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="styles.css">
-   <title>Register form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Register form</title>
 </head>
-
 <body>
-   <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
-      <h2>Register form</h2>
-      <h4>Both fields are <span>required</span></h4>
 
-      <label>Username</label>
-      <input type="text" name="username">
+    <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
+        <h2>Register form</h2>
+        <h4>Both fields are <span>required</span></h4>
 
-      <label>Password</label>
-      <input type="text" name="password">
+        <label>Username</label>
+        <input type="text" name="username">
 
-      <button type="submit" name="submit">Register</button>
+        <label>Password</label>
+        <input type="text" name="password">
 
-      <p class="error">
-         <?php echo @$user->error ?>
-      </p>
-      <p class="success">
-         <?php echo @$user->success ?>
-      </p>
-   </form>
+        <button type="submit" name="submit">Register</button>
+
+        <!-- Display error message if any -->
+        <p class="error"><?php echo @$user->error ?></p>
+        <!-- Display success message if any -->
+        <p class="success"><?php echo @$user->success ?></p>
+    </form>
+
 </body>
-
 </html>

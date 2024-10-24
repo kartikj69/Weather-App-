@@ -16,7 +16,7 @@ class LoginUser{
 		$this->login();
 	}
 
-
+	// Method to handle user login
 	private function login(){
 		foreach ($this->stored_users as $user) {
 			if($user['username'] == $this->username){
@@ -30,4 +30,13 @@ class LoginUser{
 		return $this->error = "Wrong username or password";
 	}
 
+	// Method to handle errors
+	private function handleError($errorMessage){
+		$this->error = $errorMessage;
+	}
+
+	// Method to handle success
+	private function handleSuccess($successMessage){
+		$this->success = $successMessage;
+	}
 }
